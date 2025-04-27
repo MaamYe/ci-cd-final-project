@@ -73,7 +73,12 @@ def create_counters(name):
     )
     return (
         jsonify(
-
+            name=name,
+            counter=0
+        ),
+        status.HTTP_201_CREATED,
+        {"Location": location_url},
+    )
 
 
 ############################################################
