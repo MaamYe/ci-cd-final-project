@@ -90,7 +90,7 @@ def resource_conflict(error):
 @app.errorhandler(status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
 def mediatype_not_supported(error):
     """Handles unsupported media requests with 415_UNSUPPORTED_MEDIA_TYPE"""
-    message=str(error)
+    message = str(error)
     app.logger.warning(message)
     return (
         jsonify(
@@ -105,7 +105,7 @@ def mediatype_not_supported(error):
 @app.errorhandler(status.HTTP_500_INTERNAL_SERVER_ERROR)
 def internal_server_error(error):
     """Handles unexpected server error with 500_SERVER_ERROR"""
-    message=str(error)
+    message = str(error)
     app.logger.error(message)
     return (
         jsonify(
